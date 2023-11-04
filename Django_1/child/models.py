@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+
+class Olga_Model(models.Model):
+    pass

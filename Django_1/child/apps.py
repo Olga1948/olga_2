@@ -6,4 +6,4 @@ class ChildConfig(AppConfig):
     name = 'child'
 
     def ready(self):
-        import Django_1.child.signals
+        from . import signals
