@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, Rating, Comment
+from .models import Product, Rating, Comment, Category, Article
 from django.contrib.auth.models import User
 
 
@@ -47,3 +47,15 @@ class ProductRatingCommentsSerializer(serializers.Serializer):
         comments = Comment.objects.filter(product=my_product)
         comment_data = CommentSerializer(comments, many=True).data
         return comment_data
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = '__all__'
+
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Article
+        fields = '__all__'
