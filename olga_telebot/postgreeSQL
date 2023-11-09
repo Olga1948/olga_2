@@ -1,0 +1,9 @@
+CREATE DATABASE olga_db
+
+\c olga_db
+
+CREATE TABLE qa(
+    id SERIAL PRIMARY KEY,
+    question TEXT NOT NULL,
+    answer TEXT NOT NULL,
+);
